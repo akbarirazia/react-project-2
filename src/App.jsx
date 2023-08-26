@@ -1,7 +1,7 @@
 import "./index.css"
 import { useState } from "react"
 function App() {
-  const [input, setInput] = useState("Add a task")
+  const [input, setInput] = useState("")
   const [tasks, setTasks] = useState([
     { id: 2, task: "my second task" },
     { id: 1, task: "my first task" },
