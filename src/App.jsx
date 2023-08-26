@@ -1,7 +1,7 @@
 import "./index.css"
 import { useState } from "react"
 function App() {
-  const [input, setInput] = useState("Hello")
+  const [input, setInput] = useState("Add a task")
   const [tasks, setTasks] = useState([
     { id: 2, task: "my second task" },
     { id: 1, task: "my first task" },
@@ -9,7 +9,7 @@ function App() {
 
   function addTask() {
     if (input === "") {
-      return // Do nothing if input is empty
+      return
     }
     let newTask = input
 
@@ -47,7 +47,7 @@ function App() {
             <li key={task.id} className="flex justify-between mb-3 ">
               <strong>{task.id}</strong> <i>{task.task} </i>
               <button
-                className="mx-3 p-3 bg-red-600 text-white rounded"
+                className="p-2 bg-red-600 text-white rounded"
                 onClick={() => handleDelete(task.id)}
               >
                 delete
